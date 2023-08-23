@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/font/css/all.css">
+</head>
+<body class="bg-slate-100">
+  <section id="hero-section" class="container" >
+   <!-- navbar -->
+<nav class=" py-5 md:px-5 shadow md:shadow-none md:w-2/3 mx-auto container"  >
+  <div class="flex justify-evenly  items-center">
+    <button class="md:hidden">
+      <i class="fa-solid fa-bars " id="icon"></i>
+    </button>
+    <div class="font-[poppins] text-xl md:text-3xl">Pintar
+      <span class="font-bold text-orange-500">Masak</span>
+    </div>
+    <div id="tool" class=" top-20 mx-auto hidden md:justify-around items-center transition md:static fixed z-10 w-52 md:w-0 md:flex h-52 md:h-0 md:bg-white bg-gray-600 rounded-2xl ">
+      <ul class="p-5 text-center md:text-gray-600 text-white font-[poppins] text-lg">
+        <li><a href="#hero-section">Home</a></li>
+      </ul>
+      <ul class="p-5 text-center md:text-gray-600 text-white font-[poppins] text-lg">
+        <li>
+          <a href="#">Favorite</a>
+        </li>
+      </ul>
+      <ul class=" font-medium  text-center  mx-auto text-white font-[poppins] rounded-md mt-5 md:mt-0">
+        <a href="#" class="bg-orange-500 py-1  px-7">Login</a>
+      </ul>
+    </div>
+    <i class="fa-solid fa-sun cursor-pointer"></i>
+  </div>
+</nav>
+<!-- Navbar end  -->
+
+<!-- main  -->
+        <main class="px-3 py-5  md:w-2/3 mx-auto"  >
+      <h1 class="text-center font-bold text-2xl md:text-4xl text-orange-500">Star Searching For Your Favorite  
+       <span class="text-slate-900">Food</span> Recept</h1>
+       <p class="text-center my-3 text-sm text-gray-400 font-[poppins]">Carilah Berbagai Cita Rasa Resep Makanan Dengan Tutorial Masakan</p>
+       <div class="cari flex items-center w-full my-3 justify-end focus:outline-none ">
+       <input type="text" id="searchInput" oninput="searchData()" placeholder="Search" class="border  focus:outline-orange-500 shadow-md w-full placeholder:hidden p-3 rounded ">
+       <i class="fa-solid fa-search text-orange-500  absolute mr-3" id="logoCari"></i>
+       </div>
+
+       <!-- card -->
+       <div id="noDataMessage" class="hidden text-xl mt-10 text-center">Data tidak ditemukan.
+      </div>
+<!-- end main  -->
+
+<!-- images -->
+
+       <ul id="dataList" class="relative sm:flex gap-2 sm:gap-2  sm:flex-wrap sm:justify-around">
+        <!--  -->
+        <li class="bg-orange-50  shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          
+          <img src="/img/burger.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Burger</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <button onclick="showModal('modal1')" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</button>
+
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+
+        </li>
+        <!--  -->
+        <li class="bg-orange-50  shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/sate padang.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Sate Padang</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <button onclick="showModal('modal2')"  class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</button>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50  shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/sate.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Sate</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50 hidden sm:block shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/bakso.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Bakso</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50 hidden sm:block shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/mieaceh.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Mie Aceh</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50 hidden sm:block shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/sotoayam.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Soto Ayam</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50 hidden sm:block shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/sushi.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Sushi</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+        <!--  -->
+        <li class="bg-orange-50 hidden sm:block shadow-lg px-3 py-2 my-10 rounded-md sm:w-52 overflow-hidden md:hover:rotate-3 transition-all">
+          <img src="/img/bolu gulung.png" class="mb-5   w-full " alt="">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-black font-bold  text-lg font-['poppins'] ">Bolu Gulung</h4>
+            <div class="flex gap-3">
+              <i class="fa-solid fa-bookmark "></i>
+              
+            </div>
+          </div>
+          <div class="flex space-x-4 my-1">
+            <a href="#" class="rounded-md text-white  font-['poppins'] focus:bg-orange-600 hover:bg-orange-400 bg-orange-500 py-1 px-4 flex-shrink-0">Resep</a>
+            <a href="#" class="rounded-md border-orange-600 hover:bg-slate-50 font-['poppins'] border text-gray-700  py-1 px-4 flex-shrink-0">Tutorial</a>
+          </div>
+        </li>
+        <!--  -->
+      </ul>
+        <div class="text-center text-gray-600 text-xs">copyright @2023 all right reserved</div>
+      </div>
+      <!-- Modal  -->
+      <!--  -->
+      <div>
+        <div id="modal1" class="modal hidden fixed top-0 left-0 right-0 bottom-0 shadow-sm z-50 overflow-y-scroll">
+          <div class="modal-content bg-white max-w-lg my-28 mx-auto p-5 rounded shadow-sm ">
+            <h2 class="font-bold">Bahan-bahan</h2>
+            <ul>
+              <li>- 500gr daging sapi has(boleh campur jeroan or lidah sapi)</li>
+              <li>- Air secukupnya untuk merebus daging</li>
+              <li>- 100 gram Tepung Beras</li>
+              <li>Bumbu Halus</li>
+              <li>- 8 Siung bawang merah</li>
+              <li>- 5 Siung bawang putih</li>
+              <li>- 1/2 sdt merica</li>
+              <li>- 1/2 sdt jinten</li>
+              <li>- 1/2 sdt ketumbar</li>
+              <li>- 10 Buah Cabai Merah</li>
+              <li>- 2 Buah Cabe rawit</li>
+              <li>- 1/2 Biji Pala</li>
+              <li>- 1 Ruas Kunyit</li>
+              <li>- 1 Ruas Jahe</li>
+              <li>Bahan Cemplung</li>
+              <li>2 Buah Kapulaga</li>
+              <li>2 Buah bunga lawang</li>
+              <li>5 cm Kayu manis</li>
+              <li>1 Batang sereh</li>
+              <li>1 ruas lengkuas</li>
+            </ul>
+            <button class="custom-button mt-2 rounded text-white bg-orange-600 px-3 py-1" onclick="hideModal('modal1')">
+              Tutup
+            </button>
+          </div>
+      </div>
+      <!--  -->
+      <div>
+        <div id="modal2" class="modal hidden fixed top-0 left-0 right-0 bottom-0 shadow-sm z-50 overflow-y-scroll">
+          <div class="modal-content bg-white max-w-lg my-28 mx-auto p-5 rounded shadow-sm ">
+            <h2 class="font-bold">Bahan-bahan</h2>
+            <ul>
+              <li>- 500gr daging sapi has(boleh campur jeroan or lidah sapi)</li>
+              <li>- Air secukupnya untuk merebus daging</li>
+              <li>- 100 gram Tepung Beras</li>
+              <li>Bumbu Halus</li>
+              <li>- 8 Siung bawang merah</li>
+              <li>- 5 Siung bawang putih</li>
+              <li>- 1/2 sdt merica</li>
+              <li>- 1/2 sdt jinten</li>
+              <li>- 1/2 sdt ketumbar</li>
+              <li>- 10 Buah Cabai Merah</li>
+              <li>- 2 Buah Cabe rawit</li>
+              <li>- 1/2 Biji Pala</li>
+              <li>- 1 Ruas Kunyit</li>
+              <li>- 1 Ruas Jahe</li>
+              <li>Bahan Cemplung</li>
+              <li>2 Buah Kapulaga</li>
+              <li>2 Buah bunga lawang</li>
+              <li>5 cm Kayu manis</li>
+              <li>1 Batang sereh</li>
+              <li>1 ruas lengkuas</li>
+            </ul>
+            <button class="custom-button text-white mt-2 rounded bg-orange-600 px-3 py-1" onclick="hideModal('modal2')">
+              Tutup
+            </button>
+          </div>
+      </div>
+      
+    </main>
+  </section>
+
+  <script>
+  const icon = document.getElementById('icon');
+  const tool = document.getElementById('tool')
+
+    icon.addEventListener('click', function () {
+        tool.classList.toggle('togle')
+    })
+
+    // let logoCari = document.getElementById('logoCari');
+    // let searchInput = document.getElementById('searchInput');
+    // searchInput.addEventListener('input', function() {
+    //   if (searchInput.value.trim()==='') {
+    //     logoCari.style.display='block';
+    //   } else {
+    //     logoCari.style.display='none';
+    //   }
+    // })
+    // pencarian
+
+    function searchData() {
+      let input, filter, ul, li, i, txtValue, found;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById('dataList');
+      li = ul.getElementsByTagName('li');
+      found = false;
+
+      if (filter === "") {
+        for (i = 0; i < li.length; i++) {
+          li[i].style.display = 'none';
+        }
+        return;
+      }
+
+      for (i = 0; i < li.length; i++) {
+        txtValue = li[i].textContent || li[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = '';
+          found = true;
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+
+      const noDataMessage = document.getElementById('noDataMessage');
+      if (found) {
+        noDataMessage.style.display = 'none';
+      } else {
+        noDataMessage.style.display = 'block';
+      }
+    }
+
+
+    function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    }
+
+    function hideModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+
+  
+
+
+  </script>
+  <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+</body>
+<style>
+  .togle{
+    display: block;
+  }
+  /* Gaya untuk tombol */
+/* .custom-button {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #2980b9;
+} */
+
+/* Gaya untuk modal */
+/* .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;  */
+  /* Tambahkan scrollbar jika isi modal panjang */
+/* } */
+/* 
+.modal-content {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+} */
+
+/* Gaya untuk menyembunyikan scrollbar jika isi modal panjang */
+/* .modal-content::-webkit-scrollbar { */
+  /* display: none; */
+/* } */
+
+</style>
+</html>
